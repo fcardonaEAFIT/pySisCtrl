@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from setuptools import setup, find_packages_namespaces
+from setuptools import setup, find_packages, find_namespace_packages
 
 with open('README.md') as f:
     readme = f.read()
@@ -18,7 +18,7 @@ setup(
     url='https://github.com/fcardonaEAFIT/pySisCtrl',
     license=license,
     package_dir={'': 'src'},
-    packages=find_packages_namespaces(where='src'),
+    packages=find_namespace_packages(where='src'),
     entry_points={
         'console_scripts': [
             'pysisctrl = pysisctrl.main:main_func'
